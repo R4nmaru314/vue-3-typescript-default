@@ -8,17 +8,17 @@ import HelloWorldComponent from "@/components/hello-world-component.vue";
 })
 export default class HomeView extends Vue {
 
-  text: string = process.env.VUE_APP_EXAMPLE_TEXT
+  textInput: string = process.env.VUE_APP_EXAMPLE_TEXT
 
-  getText() {
-    exampleStoreModule.actionSetHelloWorld(this.text);
+  get text() {
+    exampleStoreModule.actionSetHelloWorld(this.textInput);
     return exampleStoreModule.getHelloWorld
   }
 }
 </script>
 
 <template>
-<hello-world-component :msg="getText()"></hello-world-component>
+<hello-world-component :msg="text"></hello-world-component>
 </template>
 
 <style scoped>
