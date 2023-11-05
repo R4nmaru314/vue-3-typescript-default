@@ -1,9 +1,9 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
-import HomeView from "@/views/HomeView.vue";
+import HomeComponent from "@/components/home/home-component.vue";
 
 const routes: Array<RouteRecordRaw> = [
   { path: "/", redirect: "/home" },
-  { path: "/", name: "home", component: HomeView },
+  { path: "/home", component: HomeComponent },
   { path: "/:notFound(.*)", redirect: "/home" },
 ];
 

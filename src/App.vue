@@ -1,22 +1,14 @@
-<script lang="ts">
-import { Component, Vue } from "vue-facing-decorator";
-import HelloWorldComponent from "@/components/hello-world-component.vue";
-import { exampleStoreModule } from "@/store/example/example-store";
+<script lang='ts'>
+import {Component, Vue} from 'vue-facing-decorator';
 
-@Component({
-  components: { HelloWorldComponent },
-})
+@Component({})
 export default class App extends Vue {
-  setText() {
-    exampleStoreModule.set(process.env.VUE_APP_EXAMPLE_TEXT);
-    return exampleStoreModule.getHelloWorld;
-  }
 }
 </script>
 
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <hello-world-component :msg="setText"></hello-world-component>
+  <img alt="Vue logo" src="./assets/logo.png">
+  <router-view></router-view>
 </template>
 
 <style>
