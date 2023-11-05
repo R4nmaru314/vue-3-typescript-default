@@ -53,5 +53,5 @@ get text() {
 }
 ```
 
-### vue-facing-decorator Usage 
+### vue.config.js Usage 
 change vue.config.js file to call local backend services for local development
